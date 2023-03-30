@@ -1,0 +1,27 @@
+const mongoose = require('mongoose');
+
+const ListUser1 = new mongoose.Schema({
+
+fullname: {
+    type: String,
+    required: true
+},
+email:{
+    type: String,
+    required: true,
+},
+password: {
+    type: String,
+    required: true
+},
+
+files:
+    {
+     
+        type: String,
+        required: true
+    }
+})
+
+const ListUser = new mongoose.model("ListUser",ListUser1);
+module.exports = ListUser;
